@@ -35,7 +35,7 @@ jobs:
         uses: actions/cache@v3
         id: cache-act
         with:
-          path: act_dr6_lenslike/data/v1.1
+          path: act_dr6_lenslike_old/data/v1.1
           key: ${{ runner.os }}-act-dr6-v1.1
 
       - name: Download ACT DR6 Lensing Data
@@ -47,7 +47,7 @@ jobs:
         shell: bash -l {0}
         run: |
           conda activate test
-          pytest -v act_dr6_lenslike/tests/test_act.py
+          pytest -v act_dr6_lenslike_old/tests/test_act.py
 
       - name: Install Cobaya and Camb
         shell: bash -l {0}
@@ -62,5 +62,5 @@ jobs:
         shell: bash -l {0}
         run: |
           conda activate test
-          pytest -v act_dr6_lenslike/tests/test_cobaya.py
+          pytest -v act_dr6_lenslike_old/tests/test_cobaya.py
 

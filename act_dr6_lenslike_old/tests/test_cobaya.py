@@ -3,7 +3,7 @@ import numpy as np
 
 from cobaya.model import get_model
 from cobaya.install import install
-from act_dr6_lenslike import ACTDR6LensLike
+from act_dr6_lenslike_old import ACTDR6LensLike
 
 info = {
     "params" : {
@@ -43,7 +43,7 @@ class ACTLikeTest(unittest.TestCase):
     # arbitray.
 
     def initialize(self):
-        install({"likelihood": {"act_dr6_lenslike.ACTDR6LensLike": None}})
+        install({"likelihood": {"act_dr6_lenslike_old.ACTDR6LensLike": None}})
 
     def generic_call(self,variant,lens_only,exp_chisq=None):
 

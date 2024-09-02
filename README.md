@@ -1,6 +1,6 @@
 # ACT DR6 Lensing Likelihood
-[![PyPI Badge](https://img.shields.io/pypi/v/act_dr6_lenslike?label=PyPI&logo=pypi)](https://pypi.org/project/act_dr6_lenslike/)
-[![CI Badge](https://github.com/ACTCollaboration/act_dr6_lenslike/actions/workflows/testing.yml/badge.svg)](https://github.com/ACTCollaboration/act_dr6_lenslike/actions)
+[![PyPI Badge](https://img.shields.io/pypi/v/act_dr6_lenslike_old?label=PyPI&logo=pypi)](https://pypi.org/project/act_dr6_lenslike_old/)
+[![CI Badge](https://github.com/ACTCollaboration/act_dr6_lenslike_old/actions/workflows/testing.yml/badge.svg)](https://github.com/ACTCollaboration/act_dr6_lenslike_old/actions)
 
 This repository contains likelihood software for the ACT DR6 CMB lensing analysis. If you use this software and/or the associated data, please cite both of the following papers:
 - [Madhavacheril, Qu, Sherwin, MacCrann, Li et al ACT Collaboration (2023), arxiv:2304.05203](https://arxiv.org/abs/2304.05203)
@@ -17,7 +17,7 @@ A pre-release version of the chains from Madhavacheril et al are available [here
 ### Option 1: Install from PyPI
 You can install the likelihood directly with:
 
-    pip install act_dr6_lenslike
+    pip install act_dr6_lenslike_old
 
 ### Option 2: Install from Github
 If you wish to be able to make changes to the likelihood for development, first clone this repository. Then install with symbolic links:
@@ -34,14 +34,14 @@ This can be performed automatically with the supplied `get-act-data.sh` script. 
 
 Download the likelihood data tarball for ACT DR6 lensing from [NASA's LAMBDA archive](https://lambda.gsfc.nasa.gov/product/act/actadv_prod_table.html).
 
-Extract the tarball into the `act_dr6_lenslike/data/` directory in the cloned repository such the directory `v1.1` is directly inside it. Only then should you proceed with the next steps.
+Extract the tarball into the `act_dr6_lenslike_old/data/` directory in the cloned repository such the directory `v1.1` is directly inside it. Only then should you proceed with the next steps.
     
 ## Step 3: use in Python codes
 
 ### Generic Python likelihood
 
 ```
-import act_dr6_lenslike as alike
+import act_dr6_lenslike_old as alike
 
 variant = 'act_baseline'
 lens_only = False # use True if not combining with any primary CMB data
@@ -67,7 +67,7 @@ Your Cobaya YAML or dictionary should have an entry of this form
 
 ```
 likelihood:
-    act_dr6_lenslike.ACTDR6LensLike:
+    act_dr6_lenslike_old.ACTDR6LensLike:
         lens_only: False
         stop_at_error: True
         lmax: 4000

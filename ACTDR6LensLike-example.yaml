@@ -17,7 +17,7 @@ theory:
             halofit_version: 'mead2016'
 
 likelihood:
-    act_dr6_lenslike.ACTDR6LensLike:
+    act_dr6_lenslike_old.ACTDR6LensLike:
         lens_only: False
         stop_at_error: True
         lmax: 4000

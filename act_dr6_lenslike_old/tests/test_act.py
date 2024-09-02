@@ -1,5 +1,5 @@
 import unittest
-import act_dr6_lenslike as alike
+import act_dr6_lenslike_old as alike
 import numpy as np
 data_dir = alike.data_dir
 
